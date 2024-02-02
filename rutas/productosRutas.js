@@ -9,7 +9,7 @@ ruta.get("/producto", async (req,res)=>{ //req y res las declaramos aqui, see pu
      res.render("productos/mostrarP",{productos});
    })
  
-   ruta.get("/nuevoproducto", admin, async (req,res)=>{
+   ruta.get("/nuevoproducto", async (req,res)=>{
      res.render("productos/nuevoP");
    })
 
