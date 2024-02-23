@@ -28,7 +28,7 @@ ruta.post("/api/nuevoProducto", subirArchivo(), async (req, res) => {
   if (error == 0) {
     res.status(200).json("Producto agregado");
   } else {
-    res.status(400).json("Error al ingresar nuevo usuario");
+    // res.status(400).json("Error al ingresar nuevo usuario");
   }
 });
  
@@ -61,7 +61,7 @@ ruta.post("/api/editarProducto", subirArchivo(), async (req, res) => {
   if (error == 0) {
     res.status(200).json("Producto Actualizado");
   } else {
-    res.status(400).json("Error al editar producto");
+    // res.status(400).json("Error al editar producto");
   }
 });
 

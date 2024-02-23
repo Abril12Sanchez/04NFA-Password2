@@ -20,7 +20,8 @@ ruta.post("/api/nuevousuario", subirArchivo(), async (req,res)=>{
   if(error==0){
     res.status(200).json("Usuario Registrado");
   }else{
-    res.status(400).json("Datos incorrectos");
+    // res.status(400).json("Datos incorrectos");
+    console.log(error);
   }
 
 })
@@ -63,6 +64,10 @@ ruta.post("/api/editarUsuario",subirArchivo(),async(req,res)=>{
   }else{
     req.body.foto=usuario.foto;
   }
+
+  // if(req.file!=undefined){
+  //   req.body.foto=req.file.originalname;
+  // }
 
   var error=await modificarUsuario(req.body);
  // res.redirect("/");
